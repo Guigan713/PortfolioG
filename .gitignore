@@ -6,7 +6,6 @@ course-layout.md
 
 # production
 /build
-.env
 
 # Logs
 logs
