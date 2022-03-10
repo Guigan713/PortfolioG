@@ -143,6 +143,10 @@ function About() {
           <div className="about-info-item">
             <h1 className="about-info-heading">Experiences</h1>
             <AboutInfoItem
+              title="Web developper / devops"
+              items={['OP-Rate', '2021-2022', 'Remote']}
+            />
+            <AboutInfoItem
               title="Junior Web Developper"
               items={['Wild Code School', '2021', 'Remote']}
             />
@@ -163,15 +167,23 @@ function About() {
             />
             <AboutInfoItem
               title="Back-End"
-              items={['Node Js', 'Express Js', 'MySQL', 'Postman']}
+              items={['Node Js', 'Express Js', 'MySQL', 'Postman', 'Php']}
+            />
+            <AboutInfoItem
+              title="Devops"
+              items={['terraform', 'GCP', 'Python']}
             />
             <AboutInfoItem
               title="Other"
-              items={['NPM', 'GIT', 'Unity', 'C#']}
+              items={['NPM', 'GIT', 'Unity', 'C#', 'Wordpress']}
             />
             <AboutInfoItem
               title="Softwares"
-              items={['Visual Studio', 'Figma', 'Trello', 'Lightroom']}
+              items={['Visual Studio', 'PyCharm', 'Docker', 'Xcode']}
+            />
+            <AboutInfoItem
+              title="tools"
+              items={['Figma', 'Trello', 'Lightroom']}
             />
           </div>
         </div>

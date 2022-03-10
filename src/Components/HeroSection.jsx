@@ -95,15 +95,49 @@ const HomeStyle = styled.div`
       li {
         margin-bottom: 1rem;
       }
-      a {
+      .logo-fb {
         display: inline-block;
         font-size: 3rem;
         transform: rotate(45deg);
         letter-spacing: 5px;
         margin-bottom: 2rem;
+        color: #3b5998;
+      }
+      .logo-insta {
+        display: inline-block;
+        font-size: 3rem;
+        transform: rotate(45deg);
+        letter-spacing: 5px;
+        margin-bottom: 2rem;
+        color: #8a3ab9;
+      }
+      .logo-twitter {
+        display: inline-block;
+        font-size: 3rem;
+        transform: rotate(45deg);
+        letter-spacing: 5px;
+        margin-bottom: 2rem;
+        color: #1da1f2;
+      }
+      .logo-gh {
+        display: inline-block;
+        font-size: 3rem;
+        transform: rotate(45deg);
+        letter-spacing: 5px;
+        margin-bottom: 2rem;
+        color: #e8eaea;
+      }
+      .logo-li {
+        display: inline-block;
+        font-size: 3rem;
+        transform: rotate(45deg);
+        letter-spacing: 5px;
+        margin-bottom: 2rem;
+        color: #0072b1;
       }
     }
   }
+
   @media only screen and (max-width: 768px) {
     .home {
       min-height: 750px;
@@ -185,6 +219,7 @@ function HeroSection() {
               <ul>
                 <li>
                   <a
+                    className="logo-fb"
                     href="https://www.facebook.com/riley.macfadden"
                     target="_blank"
                     rel="noreferrer"
@@ -194,6 +229,7 @@ function HeroSection() {
                 </li>
                 <li>
                   <a
+                    className="logo-insta"
                     href="https://www.instagram.com/Guigan713"
                     target="_blank"
                     rel="noreferrer"
@@ -203,6 +239,7 @@ function HeroSection() {
                 </li>
                 <li>
                   <a
+                    className="logo-twitter"
                     href="https://www.twitter.com/Guigan713"
                     target="_blank"
                     rel="noreferrer"
@@ -212,6 +249,7 @@ function HeroSection() {
                 </li>
                 <li>
                   <a
+                    className="logo-gh"
                     href="https://www.github.com/Guigan713"
                     target="_blank"
                     rel="noreferrer"
@@ -221,6 +259,7 @@ function HeroSection() {
                 </li>
                 <li>
                   <a
+                    className="logo-li"
                     href="https://www.linkedin.com/in/guillaume-lequin-500866171/"
                     target="_blank"
                     rel="noreferrer"

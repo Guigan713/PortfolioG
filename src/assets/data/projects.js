@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Odyssey from '../images/odyssey-desktop.jpg';
 import Wildify from '../images/wildify-desktop.jpg';
 import Stardate from '../images/stardate.png';
+import sneakers from '../images/sneakers.png';
 import ChickenNuggets from '../images/chickennuggets.png';
 
 const projects = [
@@ -37,8 +38,15 @@ const projects = [
     id: uuidv4(),
     name: 'BAC',
     desc:
-      '(en cours de création)Notre premier projet pour un véritable client, nous avons utilisé React Js pour la partie Front-end, Node Js, Express et MySQL pour la partie Back-end',
+      'Notre premier projet pour un véritable client, nous avons utilisé React Js pour la partie Front-end, Node Js, Express et MySQL pour la partie Back-end',
     // img: ,
+  },
+  {
+    id: uuidv4(),
+    name: 'Sneakers Portfolio',
+    desc:
+      "J'ai créé un portfolio regroupant mes travaux photos (mes créations et celles ou je suis le sujet), en utilisant React/NodeJs/MySQL",
+    img: sneakers,
   },
 ];
 

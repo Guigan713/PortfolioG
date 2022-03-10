@@ -5,7 +5,16 @@ import { MdDesktopMac } from 'react-icons/md';
 import { FiDatabase } from 'react-icons/fi';
 import { RiComputerLine } from 'react-icons/ri';
 import { AiOutlineHtml5, AiOutlineGithub } from 'react-icons/ai';
-import { FaCss3Alt, FaReact, FaNode, FaTrello, FaUnity } from 'react-icons/fa';
+import {
+  FaCss3Alt,
+  FaReact,
+  FaNode,
+  FaTrello,
+  FaUnity,
+  FaWordpress,
+  FaBootstrap,
+  FaPython,
+} from 'react-icons/fa';
 import { DiJavascript1, DiNpm, DiGit, DiVisualstudio } from 'react-icons/di';
 import {
   SiMysql,
@@ -13,6 +22,8 @@ import {
   SiFigma,
   SiAdobephotoshop,
   SiCsharp,
+  SiPhp,
+  SiTerraform,
 } from 'react-icons/si';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItem';
@@ -54,6 +65,8 @@ function ServiceSection() {
             icons4={<DiJavascript1 />}
             icons5={<BsBootstrapFill />}
             icons6={<SiCsharp />}
+            icons7={<FaWordpress />}
+            icons8={<FaBootstrap />}
           />
           <ServicesSectionItem
             icon={<FiDatabase />}
@@ -61,6 +74,8 @@ function ServiceSection() {
             icons={<FaNode />}
             icons2={<SiMysql />}
             icons3={<SiPostman />}
+            icons4={<FaPython />}
+            icons5={<SiPhp />}
           />
           <ServicesSectionItem
             icon={<RiComputerLine />}
@@ -73,6 +88,7 @@ function ServiceSection() {
             icons6={<SiAdobephotoshop />}
             icons7={<FaTrello />}
             icons8={<FaUnity />}
+            icons9={<SiTerraform />}
           />
         </div>
       </div>

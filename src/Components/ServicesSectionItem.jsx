@@ -33,6 +33,7 @@ function ServicesSectionItem({
   icons8,
   icons9,
   icons10,
+  icons11,
 }) {
   return (
     <ItemStyle>
@@ -49,6 +50,7 @@ function ServicesSectionItem({
         {icons8}
         {icons9}
         {icons10}
+        {icons11}
       </div>
     </ItemStyle>
   );
