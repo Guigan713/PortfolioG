@@ -21,14 +21,15 @@ const Typography = createGlobalStyle`
   }
   html{
     font-family: 'RobotoMono Regular';
-    color: var(--gray-1);
+    color: var(--gray-1); /* now a deep brown for better contrast on beige */
   }
   *{
     font-family: 'RobotoMono Regular';
     color: var(--gray-1);
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'Montserrat SemiBold'
+    font-family: 'Montserrat SemiBold';
+    color: var(--black);
   }
 `;
 

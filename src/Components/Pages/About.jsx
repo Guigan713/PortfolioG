@@ -32,6 +32,7 @@ const AboutPageStyle = styled.div`
   .about-heading {
     font-size: 3.6rem;
     margin-bottom: 3rem;
+    color: var(--primary);
   }
   .about-infos {
     margin-bottom: 4rem;
@@ -50,6 +51,7 @@ const AboutPageStyle = styled.div`
   .about-info-heading {
     font-size: 3.6rem;
     text-transform: uppercase;
+    color: var(--primary);
   }
   @media only screen and (max-width: 768px) {
     padding: 10rem 0;
@@ -74,43 +76,34 @@ function About() {
     <AboutPageStyle>
       <div className="container">
         <div className="top-section">
-          <div className="Left">
+          <div className="left">
             <p className="about-subheading">
               Hi I am <span>Guillaume Lequin</span>
             </p>
-            <h2 className="about-heading">Junior Web Developper</h2>
+            <h2 className="about-heading">Ingénieur DevOps</h2>
             <div className="about-infos">
               <PText>
-                Je suis originaire d'une toute petite ville nommée Montceau Les
-                Mines, nichée au coeur de la Bourgogne du sud. En grandissant,
-                j'ai vite compris que la ville était trop petite pour moi et
-                j'ai eu besoin d'explorer le monde. J'ai eu la chance de voyager
-                et découvrir différentes cultures, différents modes de vie. Cela
-                m'a aidé à m'ouvrir l'esprit.
-                <br />
-                <br />
-                J'ai étudié le managment au Lycée, Je n'ai jamais vraiment su ce
-                que je voulais faire de ma vie jusqu'a très récement. J'ai eu
-                une carrière professionnelle très diverse, J'ai commencé par
-                être vendeur, mais j'ai compris que ce n'etait pas fait pour
-                moi. Je suis donc devenu réceptionniste en hôtellerie. Après
-                avoir déménagé, j'ai du trouver le premier job qui se présentait
-                pour éviter de faire 200km de route chaque jour. J'ai fini
-                confectionneur de pneus pour le Génie civil chez Michelin. Une
-                fois de plus j'ai vite compris que ce n'était pas fait pour moi
-                ét ai décidé d'entamer une reconversion professionnelle.
-                <br />
-                <br />
-                j'ai décidé d'entreprendre un bilan de compétences afin de
-                trouver un job qui me correspond parfaitement. j'ai toujours été
-                intéréssé par l'informatique et les nouvelles technologies. Les
-                différents tests effectués ont montré que j'tait plus attiré par
-                les méters créatifs et la programmation. C'est pourquoi j'ai
-                décidé de devenir un Développeur Web Full Stack. Je suis
-                parfaitement épanoui dans ce nouveau rôle.
+                Originaire de Montceau-les-Mines en Bourgogne, j'ai grandi avec
+                l'envie de voir plus grand. Mes voyages m'ont ouvert l'esprit et
+                donné le goût de l'adaptation. Après un début de carrière très
+                varié (vente, hôtellerie, industrie), j'ai entrepris une
+                reconversion structurée par un bilan de compétences: la création
+                et l'informatique s'y sont imposées. J'ai d'abord choisi le
+                développement web full-stack pour apprendre à construire des
+                produits utiles de bout en bout. Au fil des projets, j'ai
+                découvert le DevOps et j'y ai trouvé un terrain naturel:
+                automatiser, fiabiliser, livrer vite et bien. Je me suis formé
+                et spécialisé (CI/CD, conteneurs, cloud, IaC) pour devenir
+                ingénieur DevOps. Aujourd'hui, je m'épanouis dans un rôle où la
+                technique sert la qualité, la performance et la simplicité au
+                quotidien.
               </PText>
             </div>
-            <Button btnText="Download CV" btnLink="#" />
+            <Button
+              btnText="Download CV"
+              btnLink="/GuillaumeLequinFR.pdf"
+              download
+            />
           </div>
           <div className="right">
             <img src={Guillaume} alt="Guillaume" />
@@ -120,70 +113,93 @@ function About() {
           <div className="about-info-item">
             <h1 className="about-info-heading">Education</h1>
             <AboutInfoItem
+              title="O'Clock School"
+              items={['Administrateur Système DevOps', '2025', 'Remote']}
+            />
+            <AboutInfoItem
+              title="AjcFormation"
+              items={['Web Developper Sharepoint C#', '2022', 'Remote']}
+            />
+            <AboutInfoItem
               title="Wild Code School"
-              items={['Web Developper Full Stack', 'Remote', '2021']}
+              items={['Web Developper Full Stack', '2021', 'Remote']}
             />
             <AboutInfoItem
               title="Prom Hôte"
-              items={[
-                'CQP assistant exploitation en Hôtellerie',
-                'Chagny',
-                '2012',
-              ]}
+              items={['CQP assistant exploitation', '2012', 'Chagny']}
             />
             <AboutInfoItem
               title="Lycée Henri Parriat"
               items={[
                 'Baccalauréat STG CFE',
-                'Montceau Les Mines',
                 '2006-2007',
+                'Montceau Les Mines',
               ]}
             />
           </div>
           <div className="about-info-item">
             <h1 className="about-info-heading">Experiences</h1>
             <AboutInfoItem
-              title="Web developper / devops"
-              items={['OP-Rate', '2021-2022', 'Remote']}
+              title="Ingénieur DevOps"
+              items={['Makara Media', '03/2025-05/2025', 'Remote']}
             />
             <AboutInfoItem
-              title="Junior Web Developper"
-              items={['Wild Code School', '2021', 'Remote']}
+              title="Web Developper"
+              items={['Neos-Sdi', '09/01/2023-05/08/2024', 'Dijon']}
+            />
+            <AboutInfoItem
+              title="Web developper / devops"
+              items={['OP-Rate', '11/2021-02/2022', 'Remote']}
             />
             <AboutInfoItem
               title="Confectionneur/Coupeur"
-              items={['Michelin Blanzy, France', '2018-2021']}
+              items={['Michelin', '2018-2021', 'Blanzy']}
             />
             <AboutInfoItem
               title="Réceptionniste Polyvalent"
-              items={['Ibis Styles Beaune', '2014-2018']}
+              items={['Ibis Styles', '2014-2018', 'Beaune']}
             />
           </div>
           <div className="about-info-item">
             <h1 className="about-info-heading">Hard Skills</h1>
             <AboutInfoItem
+              title="DevOps"
+              items={[
+                'Git',
+                'GitHub',
+                'GitLab',
+                'Terraform',
+                'Ansible',
+                'GitHub Actions',
+                'Jenkins',
+                'Docker',
+                'Kubernetes',
+              ]}
+            />
+            <AboutInfoItem
+              title="Observabilité"
+              items={['Prometheus', 'Grafana']}
+            />
+            <AboutInfoItem
+              title="Réseau / Edge"
+              items={['Traefik', 'Nginx', 'Apache', 'Cisco']}
+            />
+            <AboutInfoItem title="OS & Cloud" items={['Linux', 'AWS', 'GCP']} />
+            <AboutInfoItem
+              title="Outils"
+              items={['NPM', 'Postman', 'Figma', 'Trello']}
+            />
+            <AboutInfoItem
               title="Front-End"
-              items={['HTML5', 'CSS3', 'Javascript', 'React JS']}
+              items={['HTML5', 'CSS3', 'JavaScript', 'React']}
             />
             <AboutInfoItem
               title="Back-End"
-              items={['Node Js', 'Express Js', 'MySQL', 'Postman', 'Php']}
+              items={['Node.js', 'Express.js', 'Python']}
             />
             <AboutInfoItem
-              title="Devops"
-              items={['terraform', 'GCP', 'Python']}
-            />
-            <AboutInfoItem
-              title="Other"
-              items={['NPM', 'GIT', 'Unity', 'C#', 'Wordpress']}
-            />
-            <AboutInfoItem
-              title="Softwares"
-              items={['Visual Studio', 'PyCharm', 'Docker', 'Xcode']}
-            />
-            <AboutInfoItem
-              title="tools"
-              items={['Figma', 'Trello', 'Lightroom']}
+              title="Bases de données"
+              items={['MySQL', 'PostgreSQL']}
             />
           </div>
         </div>

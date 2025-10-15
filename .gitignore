@@ -4,6 +4,8 @@ haters/
 *.fig
 course-layout.md
 
+.env
+
 # production
 /build
 
@@ -76,3 +78,5 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+package-lock.json
+package.json

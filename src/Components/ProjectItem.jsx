@@ -15,7 +15,7 @@ const ProjectItemStyle = styled.div`
       height: 100%;
     }
   }
-  project-item-info {
+  .project-item-info {
     margin-top: 1rem;
     background-color: var(--deep-dark);
     padding: 1rem;
@@ -23,11 +23,18 @@ const ProjectItemStyle = styled.div`
   }
   .project-item-title {
     font-size: 2.2rem;
+    color: var(--primary);
   }
   .project-item-desc {
     font-size: 1.6rem;
     font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
     margin-top: 1rem;
+  }
+  .project-link {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: var(--primary);
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   }
   @media only screen and (max-width: 768px) {
     .project-item-img {
@@ -40,17 +47,23 @@ function ProjectItem({
   img = ProjectImg,
   title = 'Project Name',
   desc = 'project description',
+  link = 'project link',
 }) {
   return (
     <ProjectItemStyle>
       <Link to="/myworks" className="project-item-img">
-        <img src={img} alt="Odyssey" />
+        <img src={img} alt={title} />
       </Link>
       <div className="project-item-info">
         <Link to="#">
           <h3 className="project-item-title">{title}</h3>
         </Link>
         <p className="project-item-desc">{desc}</p>
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <p className="project-link">{link}</p>
+          </a>
+        )}
       </div>
     </ProjectItemStyle>
   );

@@ -11,17 +11,23 @@ const AboutItemStyles = styled.div`
   margin-top: 3rem;
   .title {
     font-size: 2.1rem;
+    color: var(--primary);
   }
   .items {
     display: flex;
     gap: 1.5rem;
     position: absolute;
     left: 30rem;
+    align-items: flex-start; /* avoid stretching all items to tallest height */
   }
   .item {
     background-color: var(--deep-dark);
     padding: 1rem;
     border-radius: 8px;
+    line-height: 1.2;
+  }
+  .item p {
+    margin: 0; /* remove default p top/bottom margins inside pills */
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;

@@ -7,12 +7,15 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   :root{
-    --dark-bg: #262626;
-    --gray-1: #BCB4B4;
-    --deep-dark: #1E1E1E;
-    --gray-2: #363636;
-    --white : white;
-    --black: black;
+    /* New palette: light beige + forest green accents */
+    --dark-bg: #F5F0E6; /* page background (light beige) */
+    --deep-dark: #ECE5D8; /* surfaces/cards (slightly darker beige) */
+    --gray-2: #C8BBAA; /* subtle borders/dividers (warm grey-beige) */
+    --gray-1: #2F2B28; /* primary text (deep brown/charcoal) */
+    --white : #FFFFFF;
+    --black: #000000;
+    --primary: #2E5E4E; /* forest green */
+    --on-primary: #FDFBF7; /* text on primary */
   }
   html{
     font-size: 10px;
@@ -42,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
   [data-scrollbar] {
     height: 100vh;
     overflow: hidden;
-    background-color: var(--gray-1);
+    background-color: var(--dark-bg);
     .scroll-content {
       background-color: var(--dark-bg);
     }
@@ -50,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
       z-index: 101;
       background: var(--deep-dark);
       .scrollbar-thumb-y {
-        background: var(--gray-1);
+        background: var(--gray-2);
       }
     }
   }

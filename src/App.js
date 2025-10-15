@@ -15,7 +15,7 @@ export default function App() {
         <NavMenu />
         <ScrollToTop />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/myworks" element={<MyWorks />} />
           <Route path="/contact" element={<Contact />} />

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const SectionTitleStyle = styled.div`
   text-align: center;
   p {
-    font-family: 'RobotoMono regular';
+    font-family: 'RobotoMono Regular';
     font-size: 2rem;
   }
   h2 {
@@ -12,7 +12,7 @@ const SectionTitleStyle = styled.div`
     font-size: 6rem;
     margin-top: 0.5rem;
     text-transform: uppercase;
-    color: #acb6cf;
+    color: var(--primary);
   }
   @media only screen and (max-width: 768px) {
     p {

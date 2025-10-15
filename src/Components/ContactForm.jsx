@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -9,6 +10,7 @@ const FormStyle = styled.form`
   }
   label {
     font-size: 1.8rem;
+    color: var(--primary);
   }
   input,
   textarea {
@@ -27,8 +29,8 @@ const FormStyle = styled.form`
     resize: vertical;
   }
   button[type='submit'] {
-    background-color: var(--gray-1);
-    color: var(--black);
+    background-color: var(--primary);
+    color: var(--on-primary);
     font-size: 2rem;
     display: inline-block;
     outline: none;
@@ -43,9 +45,15 @@ function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Placeholder: could integrate with email service or API
+    // eslint-disable-next-line no-alert
+    alert('Merci pour votre message!');
+  };
   return (
     <>
-      <FormStyle>
+      <FormStyle onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">
             Your name
@@ -62,9 +70,9 @@ function ContactForm() {
           <label htmlFor="email">
             Your email
             <input
-              type="text"
+              type="email"
               id="email"
-              email="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -74,9 +82,8 @@ function ContactForm() {
           <label htmlFor="message">
             Your message
             <textarea
-              type="text"
               id="message"
-              message="message"
+              name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />

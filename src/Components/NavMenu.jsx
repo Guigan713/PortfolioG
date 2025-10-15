@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdMenu, MdClose } from 'react-icons/md';
@@ -12,7 +12,12 @@ const NavMenuStyles = styled.div`
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background: var(--dark-bg);
+  /* Glass effect */
+  background: rgba(245, 240, 230, 0.55); /* translucent beige */
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid rgba(200, 187, 170, 0.7); /* soft divider */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,11 +37,12 @@ const NavMenuStyles = styled.div`
     font-family: 'RobotoMono Regular';
     padding: 1rem 2rem;
     font-size: 2rem;
-    color: var(--gray-1);
+    color: var(--primary);
     outline: none;
   }
   .active {
-    color: var(--white);
+    color: var(--primary);
+    font-weight: 700;
   }
   .mobile-menu-icon {
     position: absolute;
@@ -91,6 +97,7 @@ const NavMenuStyles = styled.div`
 
 function NavMenu() {
   const [showNav, SetShowNav] = useState(false);
+
   return (
     <NavMenuStyles>
       <div
@@ -115,11 +122,12 @@ function NavMenu() {
         <li>
           <NavLink
             to="/"
-            exact
+            end
             onClick={() => SetShowNav(!showNav)}
             role="button"
             onKeyDown={() => SetShowNav(!showNav)}
             tabIndex={0}
+            className={({ isActive }) => (isActive ? 'active' : '')}
           >
             Home
           </NavLink>
@@ -127,6 +135,7 @@ function NavMenu() {
         <li>
           <NavLink
             to="/about"
+            className={({ isActive }) => (isActive ? 'active' : '')}
             onClick={() => SetShowNav(!showNav)}
             role="button"
             onKeyDown={() => SetShowNav(!showNav)}
@@ -138,6 +147,7 @@ function NavMenu() {
         <li>
           <NavLink
             to="/myworks"
+            className={({ isActive }) => (isActive ? 'active' : '')}
             onClick={() => SetShowNav(!showNav)}
             role="button"
             onKeyDown={() => SetShowNav(!showNav)}
@@ -149,6 +159,7 @@ function NavMenu() {
         <li>
           <NavLink
             to="/contact"
+            className={({ isActive }) => (isActive ? 'active' : '')}
             onClick={() => SetShowNav(!showNav)}
             role="button"
             onKeyDown={() => SetShowNav(!showNav)}

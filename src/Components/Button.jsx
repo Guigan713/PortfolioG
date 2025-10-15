@@ -7,12 +7,13 @@ const ButtonStyle = styled.div`
   .button {
     font-size: 2.2rem;
     background-color: ${(props) =>
-      props.outline ? 'transparent' : 'var(--gray-1)'};
+      props.outline ? 'transparent' : 'var(--primary)'};
     padding: 0.7em 2em;
     border-radius: 8px;
     display: inline-block;
-    border: 2px solid var(--gray-1);
-    color: ${(props) => (props.outline ? 'var(--gray-1)' : 'black')};
+    border: 2px solid var(--primary);
+    color: ${(props) =>
+      props.outline ? 'var(--primary)' : 'var(--on-primary)'};
   }
   @media only screen and (max-width: 768px) {
     .button {
@@ -21,12 +22,29 @@ const ButtonStyle = styled.div`
   }
 `;
 
-function Button({ btnLink, btnText, outline }) {
+function Button({ btnLink = '#', btnText, outline, download = false, newTab }) {
+  const isExternal = /^https?:\/\//i.test(btnLink);
+  const isFileDownload = download || /\.(pdf|zip|docx?)$/i.test(btnLink);
+
   return (
     <ButtonStyle outline={outline} className="button-wrapper">
-      <Link className="button" to={btnLink}>
-        {btnText}
-      </Link>
+      {isExternal || isFileDownload ? (
+        <a
+          className="button"
+          href={btnLink}
+          download={isFileDownload ? '' : undefined}
+          target={isExternal && newTab !== false ? '_blank' : undefined}
+          rel={
+            isExternal && newTab !== false ? 'noreferrer noopener' : undefined
+          }
+        >
+          {btnText}
+        </a>
+      ) : (
+        <Link className="button" to={btnLink}>
+          {btnText}
+        </Link>
+      )}
     </ButtonStyle>
   );
 }

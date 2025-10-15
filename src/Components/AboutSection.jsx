@@ -86,18 +86,14 @@ function AboutSection() {
             heading="About me"
           />
           <PText>
-            Je m'appelle Guillaume, Je sors tout juste d'une formation de
-            développeur web à la Wild Code School. J'ai exercé différents jobs
-            au cours de ma vie (Industrie, Hotel restaurants, vente...) mais
-            rien qui me plaisait vraiment. c'est pourquoi j'ai décidé de changer
-            de vie et trouver un job qui me plait réellement. Me voila à
-            présent, J'étudie différents languages de programmation et créé des
-            projets vraiments cools. Vous trouverez sur mon Portfolio les
-            différents projets auxquels j'ai participé et aussi plus
-            d'informations à mon sujet. J'ai plusieures passions, comme par
-            exemple la photographie, la musique ou encore la collection de
-            sneakers. N'hesitez pas à me contacter si vous avez besoin d'un
-            développeur web ou même si vous recherchez un photographe.
+            Je m'appelle Guillaume, tout juste sorti d'une formation
+            d'Administrateur Système DevOps et diplômé. Ingénieur DevOps en
+            recherche d'opportunité, j'automatise l'infrastructure et les
+            déploiements (IaC et CI/CD), j'orchestre des workloads conteneurisés
+            et je renforce la fiabilité et l'observabilité des plateformes.
+            J'aime transformer des environnements complexes en systèmes simples,
+            performants et reproductibles, avec un sens prononcé de la qualité,
+            de la collaboration et de l'amélioration continue.
           </PText>
           <div className="about-section-buttons">
             <Button btnLink="/myworks" btnText="Works" />

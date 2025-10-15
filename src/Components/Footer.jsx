@@ -21,6 +21,12 @@ const FooterStyle = styled.div`
   .footer__col1__title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  .footer__col2 h2,
+  .footer__col3 h2,
+  .footer__col4 h2 {
+    color: var(--primary);
   }
   .copyright {
     background-color: var(--dark-bg);
@@ -77,7 +83,7 @@ export default function Footer() {
               {
                 type: 'Link',
                 title: 'Projects',
-                path: '/projects',
+                path: '/myworks',
               },
               {
                 type: 'Link',
@@ -111,16 +117,12 @@ export default function Footer() {
             heading="social Links"
             links={[
               {
-                title: 'Facebook',
-                path: 'https://www.facebook.com/riley.macfadden',
-              },
-              {
-                title: 'Twitter',
-                path: 'http://twitter.com/Guigan713',
-              },
-              {
                 title: 'Instagram',
                 path: 'http://instagram.com/Guigan713',
+              },
+              {
+                title: 'GitLab',
+                path: 'https://gitlab.com/Guigan713',
               },
               {
                 title: 'Github',
@@ -136,7 +138,7 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          <PText>Design inspired by Ayan Kahn</PText>
+          <PText />
         </div>
       </div>
     </FooterStyle>

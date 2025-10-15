@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PText from './PText';
-import MapImg from '../assets/images/mapimg.png';
+import MapImg from '../assets/images/map.png';
 
 const MapStyles = styled.div`
   background: url(${MapImg}) no-repeat;
@@ -29,12 +29,14 @@ const MapStyles = styled.div`
   .map-card-heading {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--primary);
   }
   .map-card-link {
     display: inline-block;
     font-size: 1.8rem;
     margin-top: 3rem;
     text-decoration: underline;
+    color: var(--primary);
   }
   @media only screen and (max-width: 768px) {
     background-position: 80% center;
@@ -58,7 +60,7 @@ function Map() {
             className="map-card-link"
             href="https://www.google.fr/maps/@46.6714624,4.358144,14z"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Ouvrir Google Maps
           </a>

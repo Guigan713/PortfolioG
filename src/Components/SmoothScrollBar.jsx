@@ -7,12 +7,13 @@ export default function SmoothScrollBar({ children }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const { scrollBar } = ref.current;
-    scrollBar.setPosition(0, 0);
+    if (ref.current && ref.current.scrollbar) {
+      ref.current.scrollbar.setPosition(0, 0);
+    }
   }, [pathname]);
 
   return (
-    <ScrollBar ref={ref} damping=".09">
+    <ScrollBar ref={ref} damping={0.09}>
       {children}
     </ScrollBar>
   );

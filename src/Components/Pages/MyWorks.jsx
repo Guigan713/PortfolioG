@@ -33,7 +33,7 @@ const ProjectStyles = styled.div`
     right: 1rem;
   }
   .projects-searchBar .searchIcon path {
-    color: var(--deep-dark);
+    color: var(--primary);
   }
   @media only screen and (max-width: 768px) {
     .projects-searchBar,
@@ -89,6 +89,7 @@ function MyWorks() {
               key={item.id}
               title={item.name}
               desc={item.desc}
+              link={item.link}
               img={item.img}
             />
           ))}

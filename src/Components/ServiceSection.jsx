@@ -1,29 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BsBootstrapFill } from 'react-icons/bs';
 import { MdDesktopMac } from 'react-icons/md';
 import { FiDatabase } from 'react-icons/fi';
-import { RiComputerLine } from 'react-icons/ri';
+// import { RiComputerLine } from 'react-icons/ri';
 import { AiOutlineHtml5, AiOutlineGithub } from 'react-icons/ai';
 import {
   FaCss3Alt,
   FaReact,
   FaNode,
-  FaTrello,
-  FaUnity,
-  FaWordpress,
-  FaBootstrap,
   FaPython,
+  FaCodeBranch,
+  FaCogs,
+  FaTools,
+  FaCubes,
+  FaChartLine,
+  FaNetworkWired,
+  FaCloud,
+  FaExchangeAlt,
 } from 'react-icons/fa';
-import { DiJavascript1, DiNpm, DiGit, DiVisualstudio } from 'react-icons/di';
+import {
+  DiJavascript1,
+  DiGit,
+  DiGoogleCloudPlatform,
+  DiLinux,
+} from 'react-icons/di';
 import {
   SiMysql,
-  SiPostman,
-  SiFigma,
-  SiAdobephotoshop,
-  SiCsharp,
-  SiPhp,
   SiTerraform,
+  SiAmazonaws,
+  SiAnsible,
+  SiGithubactions,
+  SiJenkins,
+  SiDocker,
+  SiKubernetes,
+  SiGitlab,
+  SiPrometheus,
+  SiGrafana,
+  SiPostgresql,
+  SiExpress,
+  SiNginx,
+  SiApache,
+  SiCisco,
 } from 'react-icons/si';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItem';
@@ -34,7 +51,13 @@ const ServicesSectionStyle = styled.div`
     display: flex;
     gap: 10rem;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 5rem;
+  }
+  .services-items > * {
+    flex: 1 1 280px;
+    min-width: 240px;
+    max-width: 360px;
   }
   @media only screen and (max-width: 768px) {
     .services-items {
@@ -56,39 +79,74 @@ function ServiceSection() {
           subheading="languages et logiciels que j'utilise"
         />
         <div className="services-items">
+          {/* DevOps sous-catégories deviennent des catégories */}
+          <ServicesSectionItem
+            icon={<FaCodeBranch />}
+            title="SCM & Registry"
+            icons={{ icon: <DiGit />, label: 'git' }}
+            icons2={{ icon: <AiOutlineGithub />, label: 'github' }}
+            icons3={{ icon: <SiGitlab />, label: 'gitlab' }}
+          />
+          <ServicesSectionItem
+            icon={<FaCogs />}
+            title="Automatisation"
+            icons={{ icon: <SiTerraform />, label: 'terraform' }}
+            icons2={{ icon: <SiAnsible />, label: 'ansible' }}
+          />
+          <ServicesSectionItem
+            icon={<FaTools />}
+            title="CI/CD"
+            icons={{ icon: <SiGithubactions />, label: 'github actions' }}
+            icons2={{ icon: <SiJenkins />, label: 'jenkins' }}
+          />
+          <ServicesSectionItem
+            icon={<FaCubes />}
+            title="Conteneurs & Orchestration"
+            icons={{ icon: <SiDocker />, label: 'docker' }}
+            icons2={{ icon: <SiKubernetes />, label: 'kubernetes' }}
+          />
+          <ServicesSectionItem
+            icon={<FaChartLine />}
+            title="Observabilité"
+            icons={{ icon: <SiPrometheus />, label: 'prometheus' }}
+            icons2={{ icon: <SiGrafana />, label: 'grafana' }}
+          />
+          {/* Réseau / Edge */}
+          <ServicesSectionItem
+            icon={<FaNetworkWired />}
+            title="Réseau / Edge"
+            icons={{ icon: <FaExchangeAlt />, label: 'traefik' }}
+            icons2={{ icon: <SiNginx />, label: 'nginx' }}
+            icons3={{ icon: <SiApache />, label: 'apache' }}
+            icons4={{ icon: <SiCisco />, label: 'cisco' }}
+          />
+          <ServicesSectionItem
+            icon={<FaCloud />}
+            title="OS & Cloud"
+            icons={{ icon: <DiLinux />, label: 'linux' }}
+            icons2={{ icon: <SiAmazonaws />, label: 'aws' }}
+            icons3={{ icon: <DiGoogleCloudPlatform />, label: 'gcp' }}
+          />
           <ServicesSectionItem
             icon={<MdDesktopMac />}
             title="Front-End Skills"
-            icons={<AiOutlineHtml5 />}
-            icons2={<FaCss3Alt />}
-            icons3={<FaReact />}
-            icons4={<DiJavascript1 />}
-            icons5={<BsBootstrapFill />}
-            icons6={<SiCsharp />}
-            icons7={<FaWordpress />}
-            icons8={<FaBootstrap />}
+            icons={{ icon: <AiOutlineHtml5 />, label: 'html5' }}
+            icons2={{ icon: <FaCss3Alt />, label: 'css3' }}
+            icons3={{ icon: <FaReact />, label: 'react' }}
+            icons4={{ icon: <DiJavascript1 />, label: 'javascript' }}
           />
           <ServicesSectionItem
             icon={<FiDatabase />}
             title="Back-End Skills"
-            icons={<FaNode />}
-            icons2={<SiMysql />}
-            icons3={<SiPostman />}
-            icons4={<FaPython />}
-            icons5={<SiPhp />}
+            icons={{ icon: <FaNode />, label: 'node.js' }}
+            icons2={{ icon: <SiExpress />, label: 'express.js' }}
+            icons3={{ icon: <FaPython />, label: 'python' }}
           />
           <ServicesSectionItem
-            icon={<RiComputerLine />}
-            title="Softwares and other Skills"
-            icons={<DiNpm />}
-            icons2={<DiGit />}
-            icons3={<AiOutlineGithub />}
-            icons4={<DiVisualstudio />}
-            icons5={<SiFigma />}
-            icons6={<SiAdobephotoshop />}
-            icons7={<FaTrello />}
-            icons8={<FaUnity />}
-            icons9={<SiTerraform />}
+            icon={<FiDatabase />}
+            title="Database Skills"
+            icons={{ icon: <SiMysql />, label: 'mysql' }}
+            icons2={{ icon: <SiPostgresql />, label: 'postgresql' }}
           />
         </div>
       </div>

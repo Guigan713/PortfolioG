@@ -38,11 +38,11 @@ const ProjectSectionStyle = styled.div`
     right: 0;
   }
   .swiper-button-prev::after,
-  .swiper-button-right::after {
+  .swiper-button-next::after {
     font-size: 2rem;
   }
   @media only screen and (max-width: 768px) {
-    .projects-item-all {
+    .projects-items-all {
       flex-direction: column;
       max-width: 400px;
       margin: 0 auto;
@@ -80,18 +80,15 @@ function ProjectsSection() {
               },
             }}
           >
-            {projects.map((project, index) => {
-              if (index >= 5) return;
-              return (
-                <SwiperSlide key={project.id}>
-                  <ProjectItem
-                    title={project.name}
-                    img={project.img}
-                    desc={project.desc}
-                  />
-                </SwiperSlide>
-              );
-            })}
+            {projects.slice(0, 8).map((project) => (
+              <SwiperSlide key={project.id}>
+                <ProjectItem
+                  title={project.name}
+                  img={project.img}
+                  desc={project.desc}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
