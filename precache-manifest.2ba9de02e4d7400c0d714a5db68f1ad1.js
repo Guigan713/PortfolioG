@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "29173bacfb90b4159508",
-    "url": "/static/js/main.86f2742f.chunk.js"
+    "revision": "825876acf2113f11fd62",
+    "url": "/static/js/main.446e2bb4.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/static/media/Montserrat-Bold.ade91f47.ttf"
   },
   {
-    "revision": "d7867bf45db36372a3a1bac16a4c7897",
+    "revision": "cbc3fa4521865ae94b352f00d76487f7",
     "url": "/index.html"
   }
 ];
