@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop.jsx';
 import NavMenu from './Components/NavMenu.jsx';
 import Home from './Components/Pages/Home.jsx';
