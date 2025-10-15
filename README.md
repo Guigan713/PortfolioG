@@ -14,9 +14,9 @@ PortfolioG est un site web personnel développé avec React et styled-components
 ## Technologies
 - React
 - styled-components
-- CSS variables
+- CSS
 - React Icons
-- GitHub Actions (déploiement automatique)
+- GitHub Actions
 
 ## Déploiement
 Le site est automatiquement déployé sur GitHub Pages à chaque push sur la branche `main` grâce à un workflow GitHub Actions.
