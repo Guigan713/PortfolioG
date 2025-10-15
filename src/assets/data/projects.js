@@ -30,6 +30,7 @@ const projects = [
     name: 'Sneakers Portfolio',
     desc: "J'ai créé un portfolio regroupant mes travaux photos (mes créations et celles ou je suis le sujet), en utilisant React/NodeJs/MySQL",
     img: sneakers,
+    link: 'https://sneakerportfolio.eu',
   },
   {
     id: uuidv4(),
